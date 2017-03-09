@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+  <input accept=".csv" type="file" (change)="onChange($event)" />
+
+  <table *ngIf="matrix">
+    <tr *ngFor="let row of matrix">
+      <td *ngFor="let cell of row">
+        {{cell.qText}}
+      </td>
+    </tr>
+  </table>
